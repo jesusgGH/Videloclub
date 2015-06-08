@@ -38,8 +38,30 @@ public abstract class Persona {
 	 * String toString()
 	 */
 	@Override
-	public abstract String toString();
+	public String toString(){
+		return this.dni+" "+this.nombre;
+	}
 	@Override
-	public abstract boolean equals(Object o);
-	public abstract int compareTo(Persona p);
+	public boolean equals(Object o){
+		boolean respuesta = false;
+		if(o!=null & o instanceof Persona){
+			Persona aux = (Persona) o;
+			if(this.dni.equals(aux.dni)){
+				respuesta = true;
+			}
+		}
+		return respuesta;
+	}
+	public int compareTo(Persona p){
+		int rtdo = 0;
+		if(this.dni.compareTo(p.dni)>0){
+			rtdo = 1;
+		}
+		else{
+			if(this.dni.compareTo(p.dni)<0){
+				rtdo = -1;
+			}
+		}
+		return rtdo;
+	}
 }
