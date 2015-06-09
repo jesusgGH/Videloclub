@@ -21,6 +21,22 @@ public class TestPersona {
 		
 		Persona p3 = new Persona("202x","alberto");
 		System.out.println(p3.toString());
+		System.out.println();
+		System.out.println();
+		
+		
+		System.out.println("Pruebo el equals");
+		System.out.println(p2.equals(p3));
+		System.out.println(p3.equals(p2));
+		System.out.println(p3.equals(p3));
+		System.out.println();
+		System.out.println();
+		
+		
+		System.out.println("Pruebo el compareTo");
+		System.out.println(p2.compareTo(p3));
+		System.out.println(p3.compareTo(p2));
+		System.out.println(p2.compareTo(p2));
 	}
 
 }
