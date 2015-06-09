@@ -14,7 +14,7 @@
  * 		//modificadores
  * 		void setNombre(String nombre)	
  */
-public abstract class Persona {
+public class Persona {
 	//atributos
 	private String dni;
 	private String nombre;
@@ -29,8 +29,12 @@ public abstract class Persona {
 		this.nombre=nombre;
 	}
 	//consultores
-	public abstract String getDni();
-	public abstract String getNombre();
+	public String getDni(){
+		return this.dni;
+	}
+	public String getNombre(){
+		return this.nombre;
+	}
 	//modificadores
 	public void setNombre(String nombre){
 		this.nombre = nombre;
