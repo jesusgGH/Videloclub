@@ -32,7 +32,9 @@ public abstract class Persona {
 	public abstract String getDni();
 	public abstract String getNombre();
 	//modificadores
-	public abstract void setNombre(String nombre);
+	public void setNombre(String nombre){
+		this.nombre = nombre;
+	}
 	//funcionalidades
 	/**
 	 * String toString()
